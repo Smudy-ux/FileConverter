@@ -1,4 +1,4 @@
-import FileInputButton from "./components/FileInputButton";
+import CompactFileManager from "./components/CompactFileManager";
 
 
 export default function Home() {
@@ -11,7 +11,7 @@ export default function Home() {
 
 
       <section className="max-w-3xl mx-auto align-middle">
-        <FileInputButton />
+        <CompactFileManager />
       </section>
     </main>
   );
