@@ -22,7 +22,7 @@ Save your new file instantly.
 
 ### Screenshots
 
-![ui](pictures/ui.png)
+![ui](./app/pictures/ui.png)
 
 
 ### Dev info
