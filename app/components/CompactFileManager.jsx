@@ -1,8 +1,8 @@
 
 'use client';
 import { useState } from "react";
-import { GrAdd, GrFormClose, GrDocumentZip} from "react-icons/gr";
-
+import { GrAdd, GrFormClose } from "react-icons/gr";
+import { GrImage, GrDocumentZip, GrPlay, GrDocumentText } from "react-icons/gr";
 
 const CompactFileManager = () => {
     const [selectedFiles, setSelectedFiles] = useState([]);
@@ -16,6 +16,13 @@ const CompactFileManager = () => {
         setSelectedFiles((prev) => prev.filter((_, i) => i !== index));
     };
 
+
+    const getFileIcon = (type) => {
+    if (type.startsWith('image/')) return <GrImage />;
+    if (type.startsWith('video/')) return <GrPlay />;
+    if (type.includes('zip') || type.includes('compressed')) return <GrDocumentZip />;
+    return <GrDocumentText />; // Default for PDFs and others
+    };
     return(
         <div className="w-full max-w-xl mx-auto space-y-6">
             {/* 1. STATE: EMPTY - Show Big Upload Box */}
@@ -55,7 +62,7 @@ const CompactFileManager = () => {
                         {selectedFiles.map((file, index) =>(
                             <div key={`${file.name}-${index}`} className="flex items-center gap-4 p-4 bg-white/[0.03] border border-white/5 rounded-2xl group hover:border-white/10 transition-all">
                                 <div className="p-3 bg-blue-500/10 rounded-xl text-blue-400">
-                                    <GrDocumentZip />
+                                    {getFileIcon(file.type)}
                                 </div>
 
                                 <div className="flex-1 min-w-0">
