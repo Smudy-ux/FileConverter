@@ -57,12 +57,12 @@ Are you tired of countless ads you need to watch before converting your files? F
 
 ## Tech Stack
 
-- **React** — UI framework
-- **Next.js** — React framework with static export
-- **TypeScript** — Type safety
-- **Tailwind CSS** — Styling
-- **jsPDF** — PDF generation
-- **Canvas API** — Image format conversion
+- **React** - UI framework
+- **Next.js** - React framework with static export
+- **TypeScript** - Type safety
+- **Tailwind CSS** - Styling
+- **jsPDF** - PDF generation
+- **Canvas API** - Image format conversion
 
 ---
 
@@ -101,10 +101,10 @@ Output will be in the `dist/` directory.
 ## Privacy
 
 All conversions happen locally in your browser. Your files are never uploaded to any server. This means:
-- ✅ No file size limits (limited only by your RAM)
-- ✅ No registration required
-- ✅ No tracking
-- ✅ Works offline after initial load
+- No file size limits (limited only by your RAM)
+- No registration required
+- No tracking
+- Works offline after initial load
 
 ---
 
